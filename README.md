@@ -10,7 +10,7 @@ Modules in Python are objects of ModuleType.
 
 **1 & 2. JPG/JPEG to PNG conversion** (use PIL library) **j2p** & **PNG to JPG conversion** (use PIL library) **p2j**
 
-    * wrote a single function which does both conversions
+    * wrote two functions p2j & j2p which does png to jpg & jpg to png conversions.
     * extracted file extension and found it's counterpart.
     * Used .convert() to modify input image to RGB and then converted image file to png or jpg depending on input file extension.
     * saved converted files in destination folder.
@@ -93,7 +93,7 @@ Procedure:
 
 * test_invalid_docstrings(): Checks if the docstrings contain any irrelevant symbols. 
 
-
+* test_ImageApp(): Runs the ImageApp and saves the modified images in results folder.
 
 
 
