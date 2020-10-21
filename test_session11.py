@@ -190,3 +190,9 @@ def test_center_crop_exec():
     ccrop=subprocess.run(' python center_crop.py --type percent --value 0.4  --crop ./images ./results/cropped_images', shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     assert len(list(ccrop.stdout.decode('utf-8'))) > 0, 'center_crop.py is not executable in cmd'
 
+def test_ImageApp():
+    ImageApp=subprocess.run('python ImageApp.zip', shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    assert len(os.listdir(r'.\results\cropped_images')) > 0, 'center_crop.py is not executable in cmd'
+    assert len(os.listdir(r'.\results\resized_images')) > 0, 'resize.py is not executable in cmd'
+    assert len(os.listdir(r'.\results\j2p_images')) > 0, 'convert.py is not executable in cmd'
+
