@@ -1,8 +1,44 @@
 # bamlight
+
 Simple Image Editor using cmd
 
+## Motivation:
+
+When I was working on MODEST, a lot of Image Augmentation had to be done, mostly some kind of basic PMDA(Poor Man's Data Augmentation). I used seperate python scripts which could do the job, but I needed something powerful which would be easy, simple and robust. This is my effort to create the same. 
+
+ 
+## Usage
+
+If you want to use the whole app, then modify values in main.py, all the directory paths, resize and crop variables.
+
+Open CMD and run this.
+
+``
+ 
+    cd to/the/cloned/directory/
+
+    python ImageApp.zip
+``
+
+Now if you want to use indiviual functions like crop or resize or image conversion, follow this
+
+``
+
+     cd to/the/cloned/directory
+     
+     python convert.py --type '<mention type of conversion either ('j2p', 'p2j')>' --convert '<pass in the source and final output directory path>'
+
+     python resize.py --type '<mention type of conversion either ('prop', 'prop_w', 'prop_h')>' --val '<pass in the value>' --resize '<pass in the source and final output directory path>'
+     
+     python center_crop.py --type '<mention type of conversion either ('px', 'p')>' --val '<pass in the value>' --crop '<pass in the source and final output directory path>'
+   
+  
+``
+ 
+## Features
  
 **1 & 2. JPG/JPEG to PNG conversion** (use PIL library) **j2p** & **PNG to JPG conversion** (use PIL library) **p2j**
+
 
     * a single function which does both conversions
     * extracted file extension and found it's counterpart.
